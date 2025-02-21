@@ -1,0 +1,22 @@
+﻿<Window x:Class="ComputerBlocker.LockedWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ComputerBlocker" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        WindowState="Maximized"
+        Topmost="True"
+        WindowStartupLocation="CenterOwner" 
+        ShowInTaskbar="False" 
+        ResizeMode="NoResize" 
+        WindowStyle="None" 
+        AllowsTransparency="True" 
+        Background="Transparent" Closing="Window_Closing" Loaded="Window_Loaded" Deactivated="Window_Deactivated" >
+    <Border CornerRadius="10" Background="AliceBlue">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Компьютер заблокирован" HorizontalAlignment="Center" Foreground="red" />
+            <PasswordBox x:Name="pass"  Margin="5" Width="200" MaxLength="12" FontSize="14" />
+            <TextBlock  x:Name="TextPass"  Margin="5" Width="200" FontSize="14" Foreground="red" />
+            <Button Content="Ok" Width="50" HorizontalAlignment="Center" Margin="5" Click="Button_Click_1" Background="White"/>
+        </StackPanel>
+        
+    </Border>
+</Window>
